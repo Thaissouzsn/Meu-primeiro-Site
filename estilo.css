@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; 
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;      /* corrige o problema de overflow horizontal */
+    min-height: 100vh; /* garante que ocupe toda a altura da tela */
+    overflow-x: hidden; /* remove qualquer rolagem horizontal */
+    overflow-y: scroll; /* mantém rolagem vertical, se necessário */
+    /* background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%); */
+    background-color: #F9E79F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    width:100vw;
+    height: 260px;
+    background-color: #ffed00;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+h1{
+    /* color: black; */
+    color: #212121;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.divH1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.divImg {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: auto;
+}
+
+.imgLampada {
+    width: 260px;
+    height: 260px;
+}
+
+.imgInfos {
+    width: 350px;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tabela{
+    /* background-color: black; */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px;
+}
+
+.botoesdeacesso{
+    font-size: 18px;
+    width: 190px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 3s ease;
+    border: none;
+    color: white;
+    font-weight: 500;
+    /* background-color: #009613; */
+    /* background-color: #2e7d32; */
+    background-color: #4CAF50;
+}
+.botoesdeacesso:hover{
+    background-color:#00b91a ;
+}
+.botoesdeacesso:active{
+    background-color: #00740e ;
+}
+.tableBotoes{
+    /* background-color: brown; */
+    border-collapse: separate;
+    border-spacing: 20px
+}
+
+.tableInfos {
+    border-collapse: separate;
+    border-spacing: 20px;
+    /* padding: 0 20px 0 20px; */
+    height: 300px; /* Altura desejada */
+    width: 95%;
+    margin-bottom: 170px;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.8s ease;
+    will-change: transform, opacity;
+    position: relative; /* Garante que o translate não afete os outros */
+}
+
+.tableInfostd {
+    background-color: #4CAF50;
+    border-radius: 30px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tableInfos p {
+    font-size: 25px;
+    padding: 25px;
+    /* color: white;*/
+    color: black;
+}
+
+.divtitulo{
+    background-color: #ffed00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 50px;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.divtitulo.visible {
+  opacity: 1;
+}
+
+.divtitulo h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+.divp {
+    display: flex;
+    align-items: center;
+    width: 82vw;
+}
+
+.divtexto {
+    display: flex;
+    width: 100vw;
+    height: 260px;
+    padding-left: 40px;
+}
+.divImgtexto {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: auto;
+}
+
+.divImgtexto img{
+    border-radius: 15px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tableInfos {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+
+.tableInfos.left {
+    transform: translateX(-10px);
+}
+
+.tableInfos.right {
+    transform: translateX(10px);
+}
+
+.tableInfos.visible {
+    opacity: 1;
+    transform: translateX(0);
+}

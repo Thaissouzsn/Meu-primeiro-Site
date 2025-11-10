@@ -1,0 +1,6 @@
+Paleta de cores
+https://corhexa.com/
+
+Gerador de Gradient
+
+https://cssgradient.io/
